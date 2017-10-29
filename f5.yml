@@ -1,17 +1,22 @@
 - hosts: 127.0.0.1
   tasks:
-  - name: Create virtual server
+  - name: Add virtual server
     bigip_virtual_server:
-      name: "myvip"
-      destination: "1.1.1.1"
-      port: "80"
-      pool: "mypool"
-      snat: "Automap"
-      description: "Primary VIP"
-      all_profiles:
-        - fasthttp
-      password: "{{ ansible }}"
-      server: "{{ 35.193.117.86 }}"
-      state: "enabled"
-      user: "{{ admin }}"
+        server: lb.mydomain.net
+        user: admin
+        password: secret
+        state: present
+        partition: MyPartition
+        name: myvirtualserver
+        destination: "{{ ansible_default_ipv4['address'] }}"
+        port: 443
+        pool: "{{ mypool }}"
+        snat: Automap
+        description: Test Virtual Server
+        all_profiles:
+            - http
+            - clientssl
+        enabled_vlans:
+            - /Common/vlan2
+        delegate_to: localhost
    
