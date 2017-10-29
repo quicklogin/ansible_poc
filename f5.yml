@@ -1,4 +1,4 @@
-- hosts: none
+- hosts: all
   tasks:
 - name: Add pool member
   bigip_pool_member:
