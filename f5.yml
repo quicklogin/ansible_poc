@@ -1,4 +1,4 @@
-- hosts: 127.0.0.1
+- hosts: 35.193.117.86
   tasks:
   - name: Add virtual server
     bigip_virtual_server:
@@ -6,12 +6,10 @@
         user: admin
         password: ansible
         state: present
-        partition: MyPartition
         name: myvirtualserver
-        destination: "104.196.219.127"
+        destination: "192.168.1.1"
         port: 443
-        pool: "mypool"
-        snat: Automap
+        pool: "webserver_pool"
         description: Test Virtual Server
         all_profiles:
             - http
