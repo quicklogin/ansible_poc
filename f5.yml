@@ -10,7 +10,7 @@
         name: myvirtualserver
         destination: "104.196.219.127"
         port: 443
-        pool: "{{ mypool }}"
+        pool: "mypool"
         snat: Automap
         description: Test Virtual Server
         all_profiles:
