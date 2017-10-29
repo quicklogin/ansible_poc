@@ -5,7 +5,7 @@
     bigip_pool_member:
         server: "35.193.117.86"
         user: "admin"
-        password: "ansible"
+        password: ""
         state: "present"
         pool: "webserver_pool"
         partition: "Common"
