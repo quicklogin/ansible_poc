@@ -18,5 +18,5 @@
             - clientssl
         enabled_vlans:
             - /Common/vlan2
-        delegate_to: localhost
+        
    
