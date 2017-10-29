@@ -1,4 +1,5 @@
   - name: Add virtual server
+    tasks:
     bigip_virtual_server:
       server: 35.193.117.86
       user: admin
