@@ -1,17 +1,17 @@
 - hosts: all
   tasks:
   - name: Add pool member
-      bigip_pool_member:
-      server: "https://35.193.117.86:8443"
-      user: "admin"
-      password: "ansible"
-      state: "present"
-      pool: "webserver_pool"
-      partition: "Common"
-      host: "192.168.1.1"
-      port: 80
-      description: "web server"
-      connection_limit: 100
-      rate_limit: 50
-      ratio: 2
-  delegate_to: localhost
+    bigip_pool_member:
+        server: "https://35.193.117.86:8443"
+        user: "admin"
+        password: "ansible"
+        state: "present"
+        pool: "webserver_pool"
+        partition: "Common"
+        host: "192.168.1.1"
+        port: 80
+        description: "web server"
+        connection_limit: 100
+        rate_limit: 50
+        ratio: 2
+    delegate_to: localhost
