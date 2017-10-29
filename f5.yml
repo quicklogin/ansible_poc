@@ -1,4 +1,5 @@
 - hosts: all
+  become: true
   tasks:
   - name: Add pool member
     bigip_pool_member:
