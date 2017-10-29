@@ -2,13 +2,13 @@
   tasks:
   - name: Add virtual server
     bigip_virtual_server:
-        server: lb.mydomain.net
+        server: 35.193.117.86
         user: admin
-        password: secret
+        password: ansible
         state: present
         partition: MyPartition
         name: myvirtualserver
-        destination: "{{ ansible_default_ipv4['address'] }}"
+        destination: "104.196.219.127"
         port: 443
         pool: "{{ mypool }}"
         snat: Automap
