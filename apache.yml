@@ -1,6 +1,4 @@
-- hosts: all
-  tasks:
-  - name: install the latest version of Apache
+ - name: install the latest version of Apache
       yum:
       name: httpd
       state: latest
