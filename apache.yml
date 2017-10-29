@@ -1,9 +1,9 @@
- - name: install the latest version of Apache
-      yum:
-      name: httpd
-      state: latest
-  - name: start apache server
-    service:
-      name: httpd
-      state: started
+- name: install the latest version of Apache
+  yum:
+    name: httpd
+    state: latest
+- name: start apache server
+  service:
+    name: httpd
+    state: started
     
