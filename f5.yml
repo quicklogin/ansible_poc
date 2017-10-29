@@ -1,4 +1,4 @@
-- hosts: 
+- hosts: 35.193.117.86
   tasks:
   - name: Create virtual server
     bigip_virtual_server:
