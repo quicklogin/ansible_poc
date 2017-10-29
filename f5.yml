@@ -1,0 +1,18 @@
+- name: Add virtual server
+  bigip_virtual_server:
+      server: 35.193.117.86
+      user: admin
+      password: ansible
+      state: present
+      name: myvirtualserver
+      destination: "{{ ansible_default_ipv4['address'] }}"
+      port: 443
+      pool: "{{ mypool }}"
+      snat: Automap
+      description: Test Virtual Server
+      all_profiles:
+          - http
+          - clientssl
+      enabled_vlans:
+          - /Common/vlan2
+  delegate_to: localhost
