@@ -3,7 +3,7 @@
   tasks:
   - name: Add pool member
     bigip_pool_member:
-        server: "https://35.193.117.86:8443"
+        server: "35.193.117.86"
         user: "admin"
         password: "ansible"
         state: "present"
