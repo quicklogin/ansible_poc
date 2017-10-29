@@ -1,16 +1,17 @@
-tasks:
-- name: Create virtual server
-  bigip_virtual_server:
-    name: "myvip"
-    destination: "1.1.1.1"
-    port: "80"
-    pool: "mypool"
-    snat: "Automap"
-    description: "Primary VIP"
-    all_profiles:
-      - fasthttp
-    password: "{{ ansible }}"
-    server: "{{ 35.193.117.86 }}"
-    state: "enabled"
-    user: "{{ admin }}"
+- hosts: localhost
+  tasks:
+  - name: Create virtual server
+    bigip_virtual_server:
+      name: "myvip"
+      destination: "1.1.1.1"
+      port: "80"
+      pool: "mypool"
+      snat: "Automap"
+      description: "Primary VIP"
+      all_profiles:
+        - fasthttp
+      password: "{{ ansible }}"
+      server: "{{ 35.193.117.86 }}"
+      state: "enabled"
+      user: "{{ admin }}"
    
