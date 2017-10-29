@@ -1,3 +1,4 @@
+- hosts: 
   tasks:
   - name: Create virtual server
     bigip_virtual_server:
