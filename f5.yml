@@ -1,4 +1,3 @@
-- name: Add virtual server
   bigip_virtual_server:
       server: 35.193.117.86
       user: admin
