@@ -1,0 +1,29 @@
+# bring stack down
+ - hosts: loadbalancer
+   become: yes
+   tasks:
+     - name: bring nginx down
+       service: name=nginx state=stopped
+ - hosts: app
+   become: yes
+   tasks:
+     - name: bring httpd down
+       service: name=httpd state=stopped
+# Restart mysql server
+ - hosts: database
+   become: yes
+   tasks:
+     - name: restart mysql server
+       service: name=mysql state=restarted
+# start stack
+ - hosts: app
+   become: yes
+   tasks:
+     - name: start http server
+       service: name=httpd state=started
+ - hosts: loadbalancer
+   become: yes
+   tasks:
+     - name: start nginx service
+       service: name=nginx state=started
+~                                       
