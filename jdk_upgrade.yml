@@ -7,7 +7,7 @@
   tasks:
   - name: Download and extract jdk
     unarchive:
-      src: http://35.193.24.16/jdk-9.0.1_linux-x64_bin.tar.gz
+      src: http://35.193.24.16/jdk-8u151-linux-x64.tar.gz
       dest: /opt
       remote_src: yes
 
@@ -15,4 +15,6 @@
     file: state=directory path={{java_name}} owner=root group=root recurse=yes
 
   - name: Make Java available for system
-    command: 'alternatives --install "/usr/bin/java" "java" "{{java_name}}/bin/java" 2000'
+    alternatives:
+      name: java
+      path: "{{java_name}}/bin/java"
