@@ -13,7 +13,7 @@
 
   - name: copy apache content
     copy:
-      src: /home/www
+      src: /home/ansible/www
       dest: /var/www/html
       mode: 0755
     notify: restart httpd
