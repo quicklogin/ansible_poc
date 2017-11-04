@@ -14,7 +14,7 @@
   - name: copy apache content
     copy:
       remote_src: yes
-      src: /var/test/www
+      src: /var/test/www/index.html
       dest: /var/www/html
       mode: 0755
     notify: restart httpd
