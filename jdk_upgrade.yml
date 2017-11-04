@@ -7,7 +7,7 @@
   tasks:
   - name: Download and extract jdk
     unarchive:
-      src: http://35.193.24.16/jdk-8u151-linux-x64.tar.gz
+      src: http://35.193.24.16/jdk-9.0.1_linux-x64_bin.tar.gz
       dest: /opt
       remote_src: yes
 
