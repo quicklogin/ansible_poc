@@ -13,7 +13,7 @@
 
   - name: copy apache content
     copy:
-      src: /var/test/www/
+      src: /var/test/www
       dest: /var/www/html
       mode: 0755
     notify: restart httpd
