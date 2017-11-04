@@ -2,7 +2,7 @@
   become: true
   vars: 
     download_dir: /opt
-    jdk_name: "{{ls -l /opt/jdk*}}"
+    jdk_name: "jdk-9*"
     java_name: "{{download_dir}}/{{jdk_name}}"
   tasks:
   - name: Download and extract jdk
