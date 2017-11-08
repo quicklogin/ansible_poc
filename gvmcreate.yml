@@ -1,5 +1,5 @@
 - name: Create Compute Engine instances
-  hosts: control
+  hosts: localhost
   gather_facts: False
   tasks:
     - name: setup gce vm
