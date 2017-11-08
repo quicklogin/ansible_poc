@@ -8,7 +8,7 @@
         zone: us-east1-c
         machine_type: n1-standard-1
         image: debian-8
-        state: present
+        state: "{{status}}"
         service_account_email: "testansible@graphic-perigee-174402.iam.gserviceaccount.com"
         credentials_file: "/home/ansible/ansible/pvkey.json"
         project_id: "graphic-perigee-174402"
