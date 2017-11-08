@@ -4,7 +4,7 @@
   tasks:
     - name: setup gce vm
       gce:
-        instance_names: {{vmname}}
+        instance_names: "{{vmname}}"
         zone: us-east1-c
         machine_type: n1-standard-1
         image: debian-8
