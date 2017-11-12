@@ -1,0 +1,15 @@
+- name: Create Compute Engine instances
+  hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: setup gce vm
+      gce:
+        instance_names: "{{vmname}}"
+        zone: us-east1-c
+        machine_type: n1-standard-1
+        image: debian-8
+        state: "{{status}}"
+        service_account_email: "ansibletest@storied-toolbox-185419.iam.gserviceaccount.com"
+        credentials_file: "/home/ansible/ansible/svpkey.json"
+        project_id: "storied-toolbox-185419"
+        disk_size: 32
