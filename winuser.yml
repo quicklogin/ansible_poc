@@ -1,5 +1,5 @@
 - name: user create
-  hosts: winserver
+  hosts: all
   gather_facts: True
   tasks:
     - name: Ensure user is present 
