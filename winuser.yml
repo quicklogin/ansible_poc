@@ -1,0 +1,14 @@
+- name: user create
+  hosts: winserver
+  gather_facts: True
+  tasks:
+    - name: Ensure user is present 
+      win_user:
+        name: "{{user}}"
+        state: present
+        fullname: "{{user}}"
+        password: "{{pass}}"
+        password_expired: yes
+        groups:
+          - Domain Users   
+          - Remote Desktop Users
