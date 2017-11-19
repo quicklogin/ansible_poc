@@ -10,7 +10,7 @@
       email: "{{ docker_hub_email }}"
   - name: create custom docker container
     docker_container:
-      name: mycustomcontainer
+      name: "{{cont_name}}"
       image: kumardokcer/ansibledocker:v1
       state: "{{state}}"
       exposed_ports:
