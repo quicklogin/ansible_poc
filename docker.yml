@@ -1,4 +1,7 @@
-- hosts: all
+- hosts: docker
+  remote_user: admin
+  become: yes
+  become_method: sudo
   tasks:
   - name: login to docker registry
     docker_login:
@@ -9,7 +12,7 @@
     docker_container:
       name: mycustomcontainer
       image: kumardokcer/ansibledocker:v1
-      state: started
+      state: "{{state}}"
       exposed_ports:
         - 80
       ports:
