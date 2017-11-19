@@ -1,5 +1,4 @@
 - hosts: all
-  remote_user: root
   tasks:
   - name: login to docker registry
     docker_login:
