@@ -1,4 +1,4 @@
-- hosts: docker
+- hosts: all
   remote_user: admin
   become: yes
   become_method: sudo
