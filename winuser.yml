@@ -5,7 +5,7 @@
     - name: Ensure user is present 
       win_user:
         name: "{{user}}"
-        state: present
+        state: "{{state}}"
         fullname: "{{user}}"
         password: "{{pass}}"
         password_expired: yes
