@@ -10,5 +10,5 @@
         password: "{{pass}}"
         password_expired: yes
         groups:
-          - Domain Users   
+          - Administrators
           - Remote Desktop Users
