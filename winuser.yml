@@ -1,10 +1,11 @@
-- name: setup ad
+- name: install web server
   hosts: all
   tasks:
-  - name: Install AD-Domain-Services feature
+  - name: install web server
     win_feature:
-      name: AD-Domain-Services
+      name: Web-Server
       state: present
       restart: True
+      include_sub_features: True
       include_management_tools: True
  
