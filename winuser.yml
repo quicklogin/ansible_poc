@@ -5,9 +5,9 @@
     win_feature:
       name: AD-Domain-Services
       state: present
-      restart: yes
-      include_sub_features: yes
-      include_management_tools: yes
+      restart: True
+      include_sub_features: True
+      include_management_tools: True
       
   - name: Reboot server
     win_shell: Restart-Computer -Force
