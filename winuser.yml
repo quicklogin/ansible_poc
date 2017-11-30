@@ -3,8 +3,10 @@
   tasks:
   - name: Install AD-Domain-Services feature
     win_feature:
-      name=AD-Domain-Services
-      include_management_tools=yes
-      include_sub_features=yes
-      state=present
+      name: AD-Domain-Services
+      state: present
+      restart: True
+      include_management_tools: True
+      include_sub_features: True
+      
  
