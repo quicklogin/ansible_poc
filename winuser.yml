@@ -9,6 +9,6 @@
       include_sub_features: yes
       include_management_tools: yes
       
-   - name: Reboot server
-     win_shell: Restart-Computer -Force
+  - name: Reboot server
+    win_shell: Restart-Computer -Force
       
