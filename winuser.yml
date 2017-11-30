@@ -4,8 +4,11 @@
   - name: install web server
     win_feature:
       name: Web-Server
-      state: present
+      state: absent
       restart: yes
       include_sub_features: yes
       include_management_tools: yes
+      
+   - name: Reboot server
+     win_shell: Restart-Computer -Force
       
