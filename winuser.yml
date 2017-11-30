@@ -4,7 +4,7 @@
   - name: install web server
     win_feature:
       name: Web-Server
-      state: absent
+      state: present
       include_sub_features: True
       include_management_tools: True
       restart: True
