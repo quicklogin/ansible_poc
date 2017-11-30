@@ -7,6 +7,4 @@
       state: present
       restart: True
       include_management_tools: True
-      include_sub_features: True
-      
  
