@@ -6,7 +6,7 @@
       name: AD-Domain-Services
       state: present
       restart: True
-      include_sub_features: True
+#     include_sub_features: True
       include_management_tools: True
       
   - name: Reboot server
