@@ -5,6 +5,6 @@
     win_acl:
       path: "{{path}}"
       user: ranga.com\sandeep
-      rights: FullControl
+      rights: Read,Write,Modify
       type: allow
       state: present
