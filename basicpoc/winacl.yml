@@ -3,7 +3,7 @@
   tasks:
   - name: setup acl for windows user
     win_domain_user:
-      user: dmuser
+      name: dmuser
       password: Password@123
       state: present
       groups:
