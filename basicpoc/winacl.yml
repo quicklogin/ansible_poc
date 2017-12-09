@@ -4,7 +4,7 @@
   - name: setup acl for windows user
     win_acl:
       path: "{{path}}"
-      user: sandeep
+      user: ranga.com\sandeep
       rights: FullControl
       type: allow
       state: present
