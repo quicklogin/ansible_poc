@@ -8,5 +8,3 @@
       rights: FullControl
       type: allow
       state: present
-      inherit: ContainerInherit, ObjectInherit
-      propagation: 'None'
