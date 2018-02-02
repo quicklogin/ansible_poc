@@ -9,7 +9,7 @@
         machine_type: n1-standard-1
         image: debian-8
         state: "{{status}}"
-        service_account_email: "ansibletest@storied-toolbox-185419.iam.gserviceaccount.com"
+        service_account_email: ""
         credentials_file: "/home/ansible/ansible/svpkey.json"
         project_id: "storied-toolbox-185419"
         disk_size: 32
